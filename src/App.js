@@ -6,7 +6,7 @@ class App extends React.Component {
     super(props)
     this.state = {
       // Add magic 8 ball outcomes to the array
-      answerArray: [],
+      answerArray: ["Try again", "Odds are in your favor", "Outlook not so good", "It is decidedly so", "For Sure"],
       question: ""
     }
   }
@@ -14,9 +14,15 @@ class App extends React.Component {
   getAnswer = () => {
     // destructures answerArray out of state
     const { answerArray } = this.state
+
+    //Would want it to pull out a random answer from our answer array
+
+//return items[items.length * Math.random() | 0]
+    let randomIndex =  Math.floor(Math.random() * 5)
+
     // write your code here!
     // Update the return statement below to reflect the outcome of your code.
-    return this.state.question
+    return answerArray[randomIndex]
   }
 
   handleChange = (e) => {
