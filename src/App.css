@@ -3,6 +3,7 @@ body{
   text-align:center;
   font-family: 'Anton', sans-serif;
   height: 90vh;
+  background-color: gray;
 }
 h1{
   text-decoration: underline;
